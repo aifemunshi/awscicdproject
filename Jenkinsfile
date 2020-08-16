@@ -16,7 +16,8 @@ pipeline{
       }
       stage("Jar Run"){
          steps{
-     set +e #so "at now"
+     set +e #so "at now" will run even if java -jar fails
+
      echo "java -jar /var/lib/jenkins/workspace/PathologyBackendProject/target/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar" | at now + 1 min
          }
       }
