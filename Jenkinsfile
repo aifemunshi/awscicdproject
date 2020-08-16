@@ -18,7 +18,7 @@ pipeline{
          steps{
            script{
                 withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
-                    sh "nohup java -jar /var/lib/jenkins/workspace/PathologyBackendProject/target/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar &"
+                    sh "nohup java -jar /var/lib/jenkins/.m2/repository/com/techprimers/aws/aws-elastic-beanstalk-example-2/0.0.1-SNAPSHOT/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar &"
                 }
             }
          }
