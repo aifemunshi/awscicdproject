@@ -16,7 +16,7 @@ pipeline{
       }
       stage("Jar Run"){
          steps{
-           sh "java -jar /var/lib/jenkins/workspace/PathologyBackendProject/target/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar"
+           sh "nohup java -jar /var/lib/jenkins/workspace/PathologyBackendProject/target/aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar &"
          }
       }
     }
