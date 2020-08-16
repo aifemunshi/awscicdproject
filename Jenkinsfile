@@ -12,7 +12,13 @@ pipeline{
       stage("Maven Build"){
          steps{
             sh "mvn clean install"
-         }   
+         }  
+      }
+      stage("Jar Run"){
+         steps{
+           sh "cd /var/lib/jenkins/workspace/PathologyBackendProject/target/"
+           sh "sudo nohup java -jar aws-elastic-beanstalk-example-2-0.0.1-SNAPSHOT.jar"
+         }
       }
     }
 }
