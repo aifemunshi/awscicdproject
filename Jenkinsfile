@@ -16,7 +16,7 @@ pipeline{
       }
       stage("Jar Run"){
          steps{
-           sh "/var/lib/jenkins/workspace/script.sh"
+           sh "nohup /var/lib/jenkins/workspace/script.sh &"
          }
       }
     }
